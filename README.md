@@ -113,6 +113,18 @@ Tableau
 
 
 
+6. Normalisation for Visualisation:
+Normalise the model outputs for use in visualisations in Tableau.
+Ensure the compatibility of the machine learning model results with the visualisation tool.
+
+
+7. Analysis 2 - Correlation Analysis:
+Use the data from Analysis 1 to perform correlation analysis.
+Examine the relationship between call reasons and media types.
+Identify patterns and trends that can inform self-service capability improvements.
+
+
+
 
 
 7. Conclusion:
