@@ -52,11 +52,32 @@ Train the Random Forest model using the training dataset. Validate the model.
 Assess the model's performance using relevant metrics (e.g., accuracy, precision, recall).
 Identify any areas for improvement and fine-tune the model if necessary.
 
-5. Normalisation for Visualisation:
+The "Daily Interactions with DIFOT Score" model has been evaluated using key metrics, where it achieved a loss of 0.5335 and an accuracy of 75.81%. 
+While the accuracy is a positive indicator, additional metrics such as precision and recall should be considered for a more comprehensive assessment. 
+Precision measures the accuracy of positive predictions, while recall assesses the model's ability to capture all relevant instances. 
+These metrics are particularly crucial if there are imbalances in the dataset or if certain outcomes carry greater significance. 
+The current evaluation provides a foundation for understanding the model's overall performance, but further analysis is needed to identify areas for improvement. 
+Fine-tuning the model based on insights gained from a more detailed examination of precision, recall, and potentially other relevant metrics 
+could enhance its effectiveness in capturing daily interactions and improving the DIFOT Score.
+
+IMAGE ACCURACY GRAPH 1
+
+
+The model for predicting "Daily Interactions with Media Type" has demonstrated commendable performance, boasting a low loss of 0.3282 and a high accuracy of 94.69%. 
+These results suggest a robust ability to correctly classify instances of media interactions. However, to gain a more nuanced understanding of the model's efficacy, 
+it's crucial to delve into precision and recall metrics. Precision would elucidate the accuracy of positive predictions, ensuring that when the model identifies an interaction 
+with a specific media type, it is highly likely to be accurate. Recall, on the other hand, assesses the model's capability to capture all relevant instances of a particular media type. 
+A more detailed analysis of these metrics can unveil potential areas for improvement, allowing for targeted fine-tuning. While the current accuracy is promising, refining the model 
+based on precision and recall considerations could further enhance its capacity to accurately predict and categorise daily interactions with media types.
+
+IMAGE ACCURACY GRAPH 2
+
+
+6. Normalisation for Visualisation:
 Normalise the model outputs for use in visualisations in Tableau.
 Ensure the compatibility of the machine learning model results with the visualisation tool.
 
-6. Analysis 2 - Correlation Analysis:
+7. Analysis 2 - Correlation Analysis:
 Use the data from Analysis 1 to perform correlation analysis.
 Examine the relationship between call reasons and media types.
 Identify patterns and trends that can inform self-service capability improvements.
