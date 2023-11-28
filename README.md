@@ -65,6 +65,7 @@ A second table of data was sourced again, from the same business although export
     While the accuracy is a positive indicator, additional metrics such as precision and recall should be considered for a more comprehensive assessment. 
 
     Precision measures the accuracy of positive predictions, while recall assesses the model's ability to capture all relevant instances. 
+
     These metrics are particularly crucial if there are imbalances in the dataset or if certain outcomes carry greater significance. 
     The current evaluation provides a foundation for understanding the model's overall performance, but further analysis is needed to identify areas for improvement. 
 
@@ -76,12 +77,16 @@ A second table of data was sourced again, from the same business although export
     The model for predicting "Daily Interactions with Media Type" has demonstrated commendable performance, boasting a low loss of 0.3282 and a high accuracy of 94.69%. 
 
     These results suggest a robust ability to correctly classify instances of media interactions. However, to gain a more nuanced understanding of the model's efficacy, 
-    it's crucial to delve into precision and recall metrics. Precision would elucidate the accuracy of positive predictions, ensuring that when the model identifies an interaction 
+    it's crucial to delve into precision and recall metrics.
+
+    Precision would elucidate the accuracy of positive predictions, ensuring that when the model identifies an interaction 
     with a specific media type, it is highly likely to be accurate. 
 
     Recall, on the other hand, assesses the model's capability to capture all relevant instances of a particular media type. 
-    A more detailed analysis of these metrics can unveil potential areas for improvement, allowing for targeted fine-tuning. While the current accuracy is promising, refining the model 
-    based on precision and recall considerations could further enhance its capacity to accurately predict and categorise daily interactions with media types.
+    A more detailed analysis of these metrics can unveil potential areas for improvement, allowing for targeted fine-tuning.
+
+    While the current accuracy is promising, refining the model based on precision and recall considerations could further enhance
+    its capacity to accurately predict and categorise daily interactions with media types.
 
     ![Graph2](Images/Accuracy_Graph_2.png)
 
