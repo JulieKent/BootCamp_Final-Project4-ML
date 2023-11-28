@@ -28,25 +28,33 @@ A second table of data was sourced again, from the same business although export
 #### *Back end (ETL)*
 
 1. Data Preparation for Machine Learning:
-Cleaning and preprocessing of data for machine learning model development.
-Handle missing values, outliers, and other data anomalies.
-Transform categorical variables (e.g., media type) into numerical representations.
-Split the dataset into training and testing sets.
+Two distinct datasets were created; "Daily Interactions with DIFOT Score" and "Daily Interactions with Media Type."
+After importing the CSV files into Google Colab, we initiated the data cleaning process by introducing a new column named "flag" through a conditional statement.
 
-2.  Machine Learning Model Development:
+IMAGE 
+
+The logic behind this statement was to assign a value of 1 if the current interaction count exceeded that of the previous day while simultaneously having a lower DIFOT score; otherwise, a value of 0 was assigned. 
+Subsequently, we delved into hyperparameter tuning using Kerastuner, a library designed for systematically exploring hyperparameter spaces to enhance deep learning model performance. 
+
+IMAGE 
+
+The top hyperparameter configurations were then applied to construct, train, and evaluate the machine learning models. 
+This approach allowed us to optimise our models for both datasets, ultimately enhancing predictive accuracy and ensuring robust performance.
+
+3.  Machine Learning Model Development:
 Random Forest as the supervised learning algorithm for predicting call volumes.
 Define the target variable (call volume by media type) and predictor variables (DIFOT %).
 Train the Random Forest model using the training dataset. Validate the model. 
 
-3. Model Evaluation:
+4. Model Evaluation:
 Assess the model's performance using relevant metrics (e.g., accuracy, precision, recall).
 Identify any areas for improvement and fine-tune the model if necessary.
 
-4. Normalisation for Visualisation:
+5. Normalisation for Visualisation:
 Normalise the model outputs for use in visualisations in Tableau.
 Ensure the compatibility of the machine learning model results with the visualisation tool.
 
-5. Analysis 2 - Correlation Analysis:
+6. Analysis 2 - Correlation Analysis:
 Use the data from Analysis 1 to perform correlation analysis.
 Examine the relationship between call reasons and media types.
 Identify patterns and trends that can inform self-service capability improvements.
