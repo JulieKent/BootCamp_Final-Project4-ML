@@ -31,7 +31,7 @@ A second table of data was sourced again, from the same business although export
 Two distinct datasets were created; "Daily Interactions with DIFOT Score" and "Daily Interactions with Media Type."
 After importing the CSV files into Google Colab, we initiated the data cleaning process by introducing a new column named "flag" through a conditional statement.
 
-IMAGE 
+<img src="Images/Creation of flag column.png" width="1200" height="600">
 
 The logic behind this statement was to assign a value of 1 if the current interaction count exceeded that of the previous day while simultaneously having a lower DIFOT score; otherwise, a value of 0 was assigned. 
 Subsequently, we delved into hyperparameter tuning using Kerastuner, a library designed for systematically exploring hyperparameter spaces to enhance deep learning model performance. 
