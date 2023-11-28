@@ -60,8 +60,7 @@ The current evaluation provides a foundation for understanding the model's overa
 Fine-tuning the model based on insights gained from a more detailed examination of precision, recall, and potentially other relevant metrics 
 could enhance its effectiveness in capturing daily interactions and improving the DIFOT Score.
 
-<img src="Images/Accuracy Graph 1.png" width="800" height="600">
-
+![Graph1](Images/Accuracy_Graph_1.png)
 
 The model for predicting "Daily Interactions with Media Type" has demonstrated commendable performance, boasting a low loss of 0.3282 and a high accuracy of 94.69%. 
 These results suggest a robust ability to correctly classify instances of media interactions. However, to gain a more nuanced understanding of the model's efficacy, 
@@ -70,7 +69,7 @@ with a specific media type, it is highly likely to be accurate. Recall, on the o
 A more detailed analysis of these metrics can unveil potential areas for improvement, allowing for targeted fine-tuning. While the current accuracy is promising, refining the model 
 based on precision and recall considerations could further enhance its capacity to accurately predict and categorise daily interactions with media types.
 
-<img src="Images/Accuracy Graph 2.png" width="800" height="600">
+![Graph2](Images/Accuracy_Graph_2.png)
 
 
 6. Normalisation for Visualisation:
