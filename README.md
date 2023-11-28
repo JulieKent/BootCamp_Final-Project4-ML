@@ -31,7 +31,7 @@ A second table of data was sourced again, from the same business although export
 Two distinct datasets were created; "Daily Interactions with DIFOT Score" and "Daily Interactions with Media Type."
 After importing the CSV files into Google Colab, we initiated the data cleaning process by introducing a new column named "flag" through a conditional statement.
 
-<img src="Images/Creation of flag column.png" width="1200" height="600">
+<img src="Images/Creation of flag column.png" width="800" height="600">
 
 The logic behind this statement was to assign a value of 1 if the current interaction count exceeded that of the previous day while simultaneously having a lower DIFOT score; otherwise, a value of 0 was assigned. 
 Subsequently, we delved into hyperparameter tuning using Kerastuner, a library designed for systematically exploring hyperparameter spaces to enhance deep learning model performance. 
@@ -60,7 +60,7 @@ The current evaluation provides a foundation for understanding the model's overa
 Fine-tuning the model based on insights gained from a more detailed examination of precision, recall, and potentially other relevant metrics 
 could enhance its effectiveness in capturing daily interactions and improving the DIFOT Score.
 
-<img src="Images/Accuracy Graph 1.png" width="1200" height="600">
+<img src="Images/Accuracy Graph 1.png" width="800" height="600">
 
 
 The model for predicting "Daily Interactions with Media Type" has demonstrated commendable performance, boasting a low loss of 0.3282 and a high accuracy of 94.69%. 
@@ -70,7 +70,7 @@ with a specific media type, it is highly likely to be accurate. Recall, on the o
 A more detailed analysis of these metrics can unveil potential areas for improvement, allowing for targeted fine-tuning. While the current accuracy is promising, refining the model 
 based on precision and recall considerations could further enhance its capacity to accurately predict and categorise daily interactions with media types.
 
-<img src="Images/Accuracy Graph 2.png" width="1200" height="600">
+<img src="Images/Accuracy Graph 2.png" width="800" height="600">
 
 
 6. Normalisation for Visualisation:
