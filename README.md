@@ -14,7 +14,7 @@ The primary API used is: '/api/v2/analytics/conversations/details', which can be
 
 **Business Databricks Notebook for Initial Pull**
 
-<img src="Images/Initial_Data.png" width="800" height="600">
+![Initial](Images/Initial_Data.png)
 
 
 A second table of data was sourced again, from the same business although exported as a cross tab from the busness' Tableau envrionment which sources the related data from a SQL Management Server.  Again, this is data only accessible within the business and was filtered for the same date range as the Genesys data prior to export and subsequent ingest into the study Databricks environment for further transformation.
