@@ -28,35 +28,41 @@ A second table of data was sourced again, from the same business although export
 #### *Back end (ETL)*
 
 1. Data Preparation for Machine Learning:
-Two distinct datasets were created; "Daily Interactions with DIFOT Score" and "Daily Interactions with Media Type."
-After importing the CSV files into Google Colab, we initiated the data cleaning process by introducing a new column named "flag" through a conditional statement.
+    
+    Two distinct datasets were created; "Daily Interactions with DIFOT Score" and "Daily Interactions with Media Type and DIFOT Score."
+After importing the CSV files into Google Colab, we initiated the data preparation process by introducing a new column named "flag" through a conditional statement.
 
-![DIFOT](Images/Creation_of_flag_column.png)
+    ![DIFOT](Images/Creation_of_flag_column.png)
 
-The logic behind this statement was to assign a value of 1 if the current interaction count exceeded that of the previous day while simultaneously having a lower DIFOT score; otherwise, a value of 0 was assigned. 
+    The logic behind this statement was to assign a value of 1 if the current interaction count exceeded that of the previous day while simultaneously having a lower DIFOT score; otherwise, a value of 0 was assigned. 
 Subsequently, we delved into hyperparameter tuning using Kerastuner, a library designed for systematically exploring hyperparameter spaces to enhance deep learning model performance. 
 
-![Karastuner](Images/Karastuner.png)
+    ![Karastuner](Images/Karastuner.png)
 
-The top hyperparameter configurations were then applied to construct, train, and evaluate the machine learning models. 
-This approach allowed us to optimise our models for both datasets, ultimately enhancing predictive accuracy and ensuring robust performance.
+    The top hyperparameter configurations were then applied to construct, train, and evaluate the machine learning models. 
+This approach allowed us to optimise our models for both datasets, ultimately enhancing predictive accuracy and ensuring robust model performance.
 
-![Karastuner](Images/Top_Hyperparameters.png)
+    ![Karastuner](Images/Top_Hyperparameters.png)
 
-3.  Machine Learning Model Development:
-Random Forest as the supervised learning algorithm for predicting call volumes.
-Define the target variable (call volume by media type) and predictor variables (DIFOT %).
-Train the Random Forest model using the training dataset. Validate the model. 
+2. Machine Learning Model Development:
 
-4. Model Evaluation:
-Assess the model's performance using relevant metrics (e.g., accuracy, precision, recall).
-Identify any areas for improvement and fine-tune the model if necessary.
+    Random Forest as the supervised learning algorithm for predicting call volumes.
+    Define the target variable (call volume by media type) and predictor variables (DIFOT %).
+    Train the Random Forest model using the training dataset. Validate the model. 
+
+3. Model Evaluation:
+
+    Assess the model's performance using relevant metrics (e.g., accuracy, precision, recall).
+    Identify any areas for improvement and fine-tune the model if necessary.
 
 The "Daily Interactions with DIFOT Score" model has been evaluated using key metrics, where it achieved a loss of 0.5335 and an accuracy of 75.81%. 
+
 While the accuracy is a positive indicator, additional metrics such as precision and recall should be considered for a more comprehensive assessment. 
+
 Precision measures the accuracy of positive predictions, while recall assesses the model's ability to capture all relevant instances. 
 These metrics are particularly crucial if there are imbalances in the dataset or if certain outcomes carry greater significance. 
 The current evaluation provides a foundation for understanding the model's overall performance, but further analysis is needed to identify areas for improvement. 
+
 Fine-tuning the model based on insights gained from a more detailed examination of precision, recall, and potentially other relevant metrics 
 could enhance its effectiveness in capturing daily interactions and improving the DIFOT Score.
 
