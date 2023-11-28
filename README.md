@@ -41,6 +41,8 @@ IMAGE
 The top hyperparameter configurations were then applied to construct, train, and evaluate the machine learning models. 
 This approach allowed us to optimise our models for both datasets, ultimately enhancing predictive accuracy and ensuring robust performance.
 
+IMAGE
+
 3.  Machine Learning Model Development:
 Random Forest as the supervised learning algorithm for predicting call volumes.
 Define the target variable (call volume by media type) and predictor variables (DIFOT %).
