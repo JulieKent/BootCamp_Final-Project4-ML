@@ -2,7 +2,7 @@
 
 Aims: 
 1. Assess if a machine learning model would be effective in predicting contact centre volume based on DIFOT (delivered in full and on time) Scores.
-2. Create visualisations on the correlation bewteen call centre volume and DIFOT.
+2. Create visualisations on the correlation between call centre volume and DIFOT.
 3. Assess other metrics including, volume by media type, volume by media type at each half hour interval, volume by reason.
 
 If contact centre volume can be predicted to a reasonable degree of accuracy, the business can be more effective in the allocation of resources in the contact centre to ensure adherence to required SLAs and KPIs.
@@ -13,7 +13,7 @@ Understanding the reasons customers contact the business can assist with underst
 
 We have drawn data from a live Australia Contact Centre which operates utilising the Genesys PureCloud Contact Centre Platform.
 
-As this is a live commerical business, an initial notebook was created within the business' Databricks enviroment which conducts a daily ingest of contact centre data via APIs and normalises into tables housed within the bsuiness' Databricks profile.
+As this is a live commercial business, an initial notebook was created within the business' Databricks environment which conducts a daily ingest of contact centre data via APIs and normalises into tables housed within the business' Databricks profile.
 
 The primary API used is: '/api/v2/analytics/conversations/details'. Details about this API is available via https://developer.genesys.cloud/devapps/api-explorer however, Genesys Cloud Licencing, developer permissions and login credentials are required to run any of the APIs.
 
@@ -22,7 +22,7 @@ The primary API used is: '/api/v2/analytics/conversations/details'. Details abou
 ![Initial](Images/Initial_Data.png)
 
 
-A second table of data was sourced, again, from the same business although exported as a cross tab from the busness' Tableau envrionment which sources the related data from a SQL Management Server.  Again, this is data only accessible within the business and was filtered for a similar date range as the Genesys data prior to export and subsequent ingest into the study Databricks environment for further transformation.
+A second table of data was sourced, again, from the same business although exported as a cross tab from the business' Tableau environment which sources the related data from a SQL Management Server.  Again, this is data only accessible within the business and was filtered for a similar date range as the Genesys data prior to export and subsequent ingest into the study Databricks environment for further transformation.
 
 
 **Resulting Databricks Table**
@@ -99,82 +99,51 @@ its capacity to accurately predict and categorise daily interactions with media 
 
 ### **Visualisations**
 
-Various Metrics and Correlation Analysis
-
 [Tableau Dashboards](https://public.tableau.com/app/profile/julie.kent5187/viz/Project4_17010577303390/Correlation?publish=yes)
 
 The first visualisation created was the 'Interactions v DIFOT' scatter plot to determine the strength of the relationship between these two metrics.  
 
 Overall, there is a very weak, negative correlation between contact centre volume and DIFOT as represented in the visual.  Even when the data is filtered to represent volume related to order delivery, it still does not strongly support the correlation relationship.
 
-
 ![Overall Correlation](Images/Overall_Correlation.PNG)
-
 
 However, when you look at the DIFOT scores across the 12 months represented in the data overlayed on the contact centre volumes per week, it can be viewed that there is a relationship between the reduced DIFOT driving an increase in contact centre volume (across December 2022/January 2023) and that the weak correlation could be driven by the otherwise stable DIFOT performance across that majority of the year.
 
-
 ![Weekly_By_Media](Images/Weekly_By_Media.PNG)
 
+The second set of visualisations created centred around the reason for the interactions.
+
+![Reasons_By_Media](Images/Reasons_ByMedia.PNG)
+
+While the top 3 reasons a customer contacts the contact centre are, 'Where's my Order?', 'Orders' (order creation) and, 'Account' (account related enquiries), the most popular reason for a customer to reach out through the contact centre is when they are looking for their order, representing 23.9% of the overall contact centre volume.  
+
+Looking at the enquiry type volumes each month, the top 3-4 enquiry types remain consistent throughout the year.  As such, it is recommended that more self service development opportunities are explored in an effort to drive down this consistent volume.
+
+![Intervals](Images/Intervals.PNG)
+
+Finally, a view of the interactions per half hour interval over the last 3 months shows the prevalence of interactions occurring over normal business hours for the East Coast.  While the contact centre is open from 8am to 8pm, Monday to Friday, it does take about an hour each morning for the volume to reach its average peak.  This does provide for an opportunity to stagger the start times of contact centre agents to flow in line with the ramping of volume along with how it tapers off at the end of the day.  This also supports a conclusion that the majority of agents should be allocated working hours in line with the East Coast business hours with a much smaller cohort covering the significantly reduced volume in the later part of the West Coast business hours.
 
 
-The second set of visualisations created centred around the reason for the interaction as well as the general volume by media type for each half hour interval.  This visual can be filtered in the Tableau Dashboard by any month available in the dataset selected by the user.
+### **Conclusion:**
 
-![Reasons_By_Media](Images/Reasons_ByMedia.PNG)  ![Volume_Intervals](Images/Volume_Intervals.PNG)
-
-Tableau
-
-6. Result Visuals:
-
-    Create visualisations to represent the correlation findings.
-    Utilise Tableau to develop interactive dashboards for easy interpretation.
-    Highlight key insights and areas for improvement.
+In conclusion, the combination of machine learning models and visualisations provides a holistic view of contact centre performance. Strategic actions based on these insights can lead to improved resource management, better adherence to SLAs, and enhanced self-service capabilities, ultimately contributing to a more efficient and customer-centric contact centre operation.
 
 
+### **Future Work:**
+Some ideas to consider predicting future call volumes based on historical data for testing.
 
+Propose potential areas for further analysis and refinement of the model.  Consider ongoing monitoring and updating of the model as new data becomes available.
 
-6. Normalisation for Visualisation:
-Normalise the model outputs for use in visualisations in Tableau.
-Ensure the compatibility of the machine learning model results with the visualisation tool.
+**Time Series Forecasting:** Factor in seasonality, trends, and any other relevant patterns in the data.
 
+**Call Arrival Rate Prediction:** Analyse patterns in historical data and incorporating external factors like time of day, day of the week, or special events.
 
-7. Analysis 2 - Correlation Analysis:
-Use the data from Analysis 1 to perform correlation analysis.
-Examine the relationship between call reasons and media types.
-Identify patterns and trends that can inform self-service capability improvements.
+**Average Handle Time Prediction:** Consider features such as the type of enquiry, customer information, and historical data on handling times.
 
+**Agent Absence Rate Prediction:** Predict the absence rate of agents. Consider factors such as holidays, weekends, and historical absence patterns.
 
+**Agent Utilisation Modelling:** Calculate agent utilisation rates based on historical data. This involves considering the number of agents available, call volumes, and average handle times to determine how efficiently agents are utilised.
 
+**Staffing Requirement Calculation:** Combine the predicted call volumes, average handle times, and absence rates to calculate the required number of agents for each interval. 
 
-
-7. Conclusion:
-    Summarise the key findings from both analyses.
-    Discuss the implications for resource allocation, SLA adherence, and self-service improvements.
-    Recommend actionable steps based on the results.
-
-8. Future Work:
-    Propose potential areas for further analysis and refinement of the model.
-    Consider ongoing monitoring and updating of the model as new data becomes available.
-
-##########Some ideas to consider predicting future call volumes based on historical data for testing; ###############
-
-### Time Series Forecasting:
-Factor in seasonality, trends, and any other relevant patterns in the data.
-
-### Call Arrival Rate Prediction:
-Analyse patterns in historical data and incorporating external factors like time of day, day of the week, or special events.
-
-### Average Handle Time Prediction:
-Consider features such as the type of inquiry, customer information, and historical data on handling times.
-
-### Agent Absence Rate Prediction:
-Predict the absence rate of agents. Consider factors such as holidays, weekends, and historical absence patterns.
-
-### Agent Utilisation Modelling:
-Calculate agent utilisation rates based on historical data. This involves considering the number of agents available, call volumes, and average handle times to determine how efficiently agents are utilised.
-
-### Staffing Requirement Calculation:
-Combine the predicted call volumes, average handle times, and absence rates to calculate the required number of agents for each interval. 
-
-### Machine Learning Regression Models:
-Train regression models using features such as historical call volumes, average handle times, and absence rates to predict the number of agents needed.
+**Machine Learning Regression Models:** Train regression models using features such as historical call volumes, average handle times, and absence rates to predict the number of agents needed.
