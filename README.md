@@ -103,7 +103,7 @@ Various Metrics and Correlation Analysis
 
 [Tableau Dashboards](https://public.tableau.com/app/profile/julie.kent5187/viz/Project4_17010577303390/Correlation?publish=yes)
 
-The first visualisation create was the 'Interactions v DIFOT' scatter plot to determine the strength of the relationship between these two metrics.  
+The first visualisation created was the 'Interactions v DIFOT' scatter plot to determine the strength of the relationship between these two metrics.  
 
 Overall, there is a very weak, negative correlation between contact centre volume and DIFOT as represented in the visual.  Even when the data is filtered to represent volume related to order delivery, it still does not strongly support the correlation relationship.
 
@@ -116,6 +116,11 @@ However, when you look at the DIFOT scores across the 12 months represented in t
 
 ![Weekly_By_Media](Images/Weekly_By_Media.PNG)
 
+
+
+The second set of visualisations created centred around the reason for the interaction as well as the general volume by media type for each half hour interval.  This visual can be filtered in the Tableau Dashboard by any month available in the dataset selected by the user.
+
+![Reasons_By_Media](Images/Reasons_ByMedia.PNG)  ![Volume_Intervals](Images/Volume_Intervals.PNG)
 
 Tableau
 
