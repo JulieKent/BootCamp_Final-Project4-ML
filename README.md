@@ -33,7 +33,12 @@ A second table of data was sourced, again, from the same business although expor
 
 **Data Preparation for Machine Learning:**
     
-Two distinct datasets were created; "Daily Interactions with DIFOT Score" and "Daily Interactions with Media Type and DIFOT Score."
+Two distinct datasets were created; "daily_interactions_difot" and "int_by_MediaType".
+
+![normalised_no](Images/normalised_no_media.PNG)
+
+![normalised_with](Images/normalised_with_media.PNG)
+
 After importing the CSV files into Google Colab, we initiated the data preparation process by introducing a new column named "flag" through a conditional statement.
 
 ![DIFOT](Images/Creation_of_flag_column.png)
