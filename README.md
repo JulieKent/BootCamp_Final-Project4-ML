@@ -108,7 +108,7 @@ its capacity to accurately predict and categorise daily interactions with media 
 
 The first visualisation created was the 'Interactions v DIFOT' scatter plot to determine the strength of the relationship between these two metrics.  
 
-Overall, there is a very weak, negative correlation between contact centre volume and DIFOT as represented in the visual.  Even when the data is filtered to represent volume related to order delivery, it still does not strongly support the correlation relationship.
+Overall, with an R-Squared value of 0.138377, there is a very weak, negative correlation between contact centre volume and DIFOT as represented in the visual.  Even when the data is filtered to represent volume related to order delivery, it still does not strongly support the correlation relationship with the R-Squared value only increasing to 0.25306.
 
 ![Overall Correlation](Images/Overall_Correlation.PNG)
 
